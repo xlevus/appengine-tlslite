@@ -15,7 +15,13 @@ from .x509certchain import X509CertChain
 
 from .integration.httptlsconnection import HTTPTLSConnection
 from .integration.tlssocketservermixin import TLSSocketServerMixIn
-from .integration.tlsasyncdispatchermixin import TLSAsyncDispatcherMixIn
+
+try:
+    from .integration.tlsasyncdispatchermixin import TLSAsyncDispatcherMixIn
+except ImportError:
+    import logging
+    logging.warning("Unable to import Async mixins.")
+
 from .integration.pop3_tls import POP3_TLS
 from .integration.imap4_tls import IMAP4_TLS
 from .integration.smtp_tls import SMTP_TLS

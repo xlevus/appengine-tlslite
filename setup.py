@@ -6,10 +6,10 @@
 from distutils.core import setup
 
 setup(name="tlslite",
-      version="0.4.3",
-      author="Trevor Perrin",
-      author_email="tlslite@trevp.net",
-      url="http://trevp.net/tlslite/",
+      version="0.4.3.appengine",
+      author="Chris Targett",
+      author_email="chris@xlevus.net",
+      url="http://github.com/xlevus/appengine-tlslite/",
       description="tlslite implements SSL and TLS.",
       license="public domain and BSD",
       scripts=["scripts/tls.py", "scripts/tlsdb.py"],
